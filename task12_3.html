@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        table {
+            border-spacing: 30px;
+        }
+        th {
+            text-align: center;
+        }
+
+    </style>
+    <body>
+        <table style="width: 100%">
+        <form>
+            <table>
+                <tr>
+                    <th colspan="2"> Create Account</th>
+                </tr>
+                <td>
+                    <label>First name:</label><br>
+                    <input type="text" required>
+                </td>
+                <td>
+                    <label>Last name:</label><br>
+                    <input type="text" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <label>Country:</label><br>
+                    <select id="country">
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="China">China</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Korea">Korea</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Email:</label><br>
+                    <input type="email" required>
+                </td>
+                <td>
+                    <label>Phone number:</label><br>
+                    <input type="number">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Password:</label><br>
+                    <input type="password" required>
+                </td>
+                <td>
+                    <label>Confirm password:</label><br>
+                    <input type="password" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" required> Terms and conditions
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="2">
+                    <input type="submit" value="Submit" style="font-size: 11pt">
+                </th>
+            </tr>
+            </table>       
+        </form>
+    </body>
+</html>
