@@ -1,72 +1,130 @@
 <!DOCTYPE html>
 <html>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-        }
-        table {
-            border-spacing: 30px;
-        }
-        th {
-            text-align: center;
-        }
-
-    </style>
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+            table, th, td {
+                border: none; 
+            }
+            table {
+                width: 100%;
+                max-width: 600px;
+                border-spacing: 15px; 
+            }
+            th {
+                text-align: left; 
+                color: blue;
+                font-size: 14pt;
+                border-bottom: 2px solid blue; 
+            }
+            input[type="text"], 
+            input[type="date"], 
+            input[type="email"], 
+            select, 
+            textarea {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
     <body>
-        <table style="width: 100%">
         <form>
             <table>
                 <tr>
-                    <th colspan="2"> Employee Detail</th>
+                    <th colspan="2">01. Personal Information</th>
                 </tr>
-                <td>
-                    <label>Employee name:</label><br>
-                    <input type="text" required>
-                </td>
-                <td>
-                    <label>Last name:</label><br>
-                    <input type="text" required>
-                </td>
-            </tr>
+                <tr>
+                    <td>
+                        <label>Employee name:</label><br>
+                        <input type="text" placeholder="First Name" required>
+                    </td>
+                    <td>
+                        <label>Last name:</label><br>
+                        <input type="text" placeholder="Last Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Starting date:</label><br>
+                        <input type="date" required>
+                    </td>
+                    <td>
+                        <label>Birth date:</label><br>
+                        <input type="date" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Employee Type:</label><br>
+                        <select id="EmployeeType">
+                            <option value="Supervisor">Supervisor</option>
+                            <option value="Worker">Worker</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label>Gender:</label><br>
+                        <div style="margin-top: 10px;">
+                            <input type="radio" name="gender"> Male
+                            <input type="radio" name="gender"> Female
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label>Position:</label><br>
+                        <input type="text" placeholder="Position" required>
+                    </td>
+                </tr>
 
-            <tr>
-                <td>
-                    <label>Starting date:</label><br>
-                    <input type="date" required>
-                </td>
-                <td>
-                    <label>Birth date:</label><br>
-                    <input type="date" required>
-                </td>
-            </tr>
+                <tr>
+                    <th colspan="2">02. Location</th>
+                </tr>
+                <tr>
+                    <td>
+                        <label>City:</label><br>
+                        <input type="text" placeholder="City">
+                    </td>
+                    <td>
+                        <label>State:</label><br>
+                        <input type="text" placeholder="State">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>ZIP:</label><br>
+                        <input type="text" placeholder="ZIP">
+                    </td>
+                    <td>
+                        <label>Address:</label><br>
+                        <textarea placeholder="Address" rows="3"></textarea>
+                    </td>
+                </tr>
 
-            <tr>
-                <td>
-                    <label>Employee Type:</label><br>
-                    <select id="EmployeeType">
-                        <option value="Supervisor">Supervisor</option>
-                        <option value="Worker">Worker</option>
-                    </select>
-                </td>
-                <td>
-                    <label>Gender:</label><br>
-                    <input type="radio"> Male
-                    <input type="radio"> Female
-                </td>
-            </tr>
+                <tr>
+                    <th colspan="2">03. Contact Information</th>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Phone:</label><br>
+                        <input type="text" placeholder="Phone">
+                    </td>
+                    <td>
+                        <label>Email:</label><br>
+                        <input type="email" placeholder="Email">
+                    </td>
+                </tr>
 
-            <tr>
-                <td>
-                    <label>Position:</label><br>
-                    <input type="text" required>
-                </td>
-            </tr>
-
-            <tr>
-                <th colspan="2">
-                    <input type="submit" value="Submit" style="font-size: 11pt">
-                </th>
-            </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; padding-top: 20px;">
+                        <input type="submit" value="Register" style="background-color: blue; color: white; padding: 10px 40px; border: none; border-radius: 5px; cursor: pointer;">
+                    </td>
+                </tr>
             </table>       
         </form>
     </body>
